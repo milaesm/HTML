@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>
+</title>
+<script>
+var accountActivity = [];
+
+function checkBalance()
+{
+        
+        //Declaring variables and asking for the input//
+        var firstName = prompt('What is your first name?');
+        var lastName = prompt('What is your last name?');
+        var fullName = firstName + " " + lastName;
+        alert('Hello ' + fullName + '. Please enter the charges and refunds for your shopping this month:');
+        var count = 0;
+        var total = 100;
+        while(count<total)
+        {       //Logical functions//
+                var charge = prompt('Please enter the charge');
+                var cost = parseInt(charge, 10);
+                accountActivity.push(cost);
+                var credit = -prompt('Please enter a refund');
+                var refund = parseInt(credit, 10);
+                accountActivity.push(refund);   
+                count = (count + cost) - refund;
+                document.write(count);
+if(count >total)
+        alert('Credit limit exceeded');
+document.getElementById('charges').innerHTML = "<li>" + accountActivity.join("</li><li>") + "</li>";
+}
+}
+</script>
+</head>
+<body onLoad="checkBalance()">
+<p>Your purchase amounts</p>
+<ol id="charges">
+</ol>
+<br>
+<p>Your refund amounts</p>
+<ol id="refunds">
+</ol>
+</body>
+</html>

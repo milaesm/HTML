@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Chapter 6 Assignment</title>
+<script type = "text/javascript">
+var firstNumber; // The first string entered by user //
+var secondNumber; // The second string entered by user //
+var number1; // first number to add //
+var number2; // second number to add //
+var sum; // sum of number1 and number2 //
+var product; //product of number1 and number2 //
+var difference; //difference of number1 and number2 //
+var quotient; //quotient of number1 and number2 //
+// user's first input as a string
+firstNumber = window.prompt( "Enter first integer" );
+// user's second input as a string //
+secondNumber = window.prompt( "Enter second integer" );
+// converting numbers from strings to integers //
+number1 = parseInt( firstNumber );
+number2 = parseInt( secondNumber );
+sum = number1 + number2; // adding two integers //
+product = number1 * number2; //multiplying two integers //
+difference = number1 - number2; //subtracting two integers //
+quotient = number1 / number2; //dividing two integers //
+// Now display the results //
+document.writeln( "<h1>The sum is " + sum + "</h1>" );
+document.writeln( "<h1>The product is " + product + "</h1>");
+document.writeln( "<h1>The difference is " + difference + "</h1>");
+document.writeln( "<h1>The quotient is " + quotient + "</h1>");
+</script>
+</head>
+<body>
+</body>
+</html>

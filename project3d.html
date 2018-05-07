@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+.outerDiv{
+border-left: solid 1px black;
+border-right: solid 1px black;
+border-top: solid 1px black;
+width: 304px;
+}
+.A{
+display: inline-block;
+width: 200px;
+  
+}
+.B{
+display: inline-block;
+width: 100px;
+  
+}
+.A-row{
+border-right: solid 1px black;
+border-bottom: solid 1px black;
+height: 32px;
+padding-left: 10px;
+padding-top: 10px;
+}
+.B-row{
+  
+border-bottom: solid 1px black;
+height: 32px;
+padding-top: 10px;
+}
+.A-total, .A-row-head, .B-row-head{
+text-align: center;
+}
+.B-row-in{
+width: 100%;
+height: 100%;
+border: none;  
+}
+</style>
+</head>
+
+<body>
+<div class="outerDiv">
+   <div class="A">
+       <div class="A-row A-row-head"> <b>A</b></div>
+       <div class="A-row"> Rent </div>
+       <div class="A-row"> Food</div>
+       <div class="A-row"> Entertainment</div>
+       <div class="A-row"> Transportation</div>
+       <div class="A-row"> <div class="A-total">Total</div></div>
+   </div>
+   <div class="B">
+       <div class="A-row B-row-head"> <b>B</b> </div>
+       <div class="B-row"> <input id="rent" class="B-row-in" onkeyup="valueChange();"type="text" value="400" ></div>
+       <div class="B-row"> <input id="food" class="B-row-in" onkeyup="valueChange();"type="text" value="200" ></div>
+       <div class="B-row"> <input id="entertain" class="B-row-in" onkeyup="valueChange();"type="text" value="100" ></div>
+       <div class="B-row"> <input id="transport" class="B-row-in" onkeyup="valueChange();"type="text" value="50" ></div>
+       <div class="B-row"> <label id="total" class="B-total"> 750</label></div>
+   </div>
+</div>
+</body>
+<script>
+function valueChange(){
+
+var total = 0;
+total = parseInt(document.getElementById('rent').value);
+total = total + parseInt(document.getElementById('food').value);
+total = total + parseInt(document.getElementById('entertain').value);
+total = total + parseInt(document.getElementById('transport').value);
+document.getElementById('total').innerHTML =total;
+}
+</script>
+</html>

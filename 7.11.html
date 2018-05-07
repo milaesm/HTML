@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>
+</title>
+    <script type="text/javascript">
+    //Declaration of varibles//
+    var miles;
+    var gallons;
+    var combinedMiles = 0;
+    var combinedGallons = 0;
+    var milesPerGallon;
+    var combinedMilesPerGallon;
+    var userInput1;
+    var userInput2;
+
+    // Asking user for the input//
+    userInput1 = window.prompt("Enter miles please:" );
+
+    // Converting string to an integer//
+    miles = Number ( userInput1 );
+    while ( miles != -1 )
+    {
+        // Asking for the input
+        userInput2 = window.prompt( "Enter gallons please:" );
+        // Converting to integers//
+        gallons = Number(userInput2);
+
+        //Sum miles to combined miles//
+        combinedMiles += miles;
+        //Sum gallons to combined gallons//
+        combinedGallons += gallons;
+      
+        //logical function//
+        if ( gallons != 0 )
+        {
+            milesPerGallon = miles / gallons;
+            document.writeln("<p />Miles : " + miles +
+            "<br />Gallons :" + gallons
+            + "<br />MPG for this tankful: " + milesPerGallon);
+        } 
+
+        combinedMilesPerGallon = combinedMiles / combinedGallons;
+        document.writeln( "<br />Total MPG: " + combinedMilesPerGallon );
+        // User's input//
+            userInput1 = window.prompt( "Enter -1 to see the result on page:" );
+        // String to Integer//
+        miles = Number ( userInput1 );
+    } 
+</script>
+</head>
+<body>
+</body>
+</html>
